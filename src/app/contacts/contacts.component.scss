@@ -1,0 +1,60 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 5px 0;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+td > button {
+  padding: 5px;
+  width: 60px;
+  cursor: pointer;
+}
+
+tr {
+  cursor: pointer;
+}
+
+tr:nth-child(even) {
+  background-color: #efefef;
+}
+
+tr.active td {
+  background-color: #4ebd66 !important;
+  color: white;
+}
+
+.contacts-container {
+  margin: 10px;
+}
+
+form > div {
+  padding: 5px 0;
+}
+
+form > div > label {
+  width: 80px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+form > div > input {
+  padding: 5px;
+}
+
+form > div:last-child {
+  display: flex;
+}
+
+form > div > button {
+  padding: 5px;
+  width: 60px;
+  cursor: pointer;
+}

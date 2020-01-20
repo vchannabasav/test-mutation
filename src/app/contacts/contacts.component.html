@@ -1,0 +1,31 @@
+<div class="contacts-container">
+  <form [formGroup]="contactFormGroup" (submit)="submit()">
+    <div>
+      <label>Phone no : </label>
+      <input type="number" formControlName="phoneNumber">
+    </div>
+    <div>
+      <label>Email : </label>
+      <input type="text" formControlName="email">
+    </div>
+    <div>
+      <button>Add</button>
+      <button type="button" (click)="update()">Update</button>
+      <button type="button" (click)="save()">Save</button>
+    </div>
+  </form>
+  <table>
+    <tr>
+      <th>Phone Number</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+    <tr [class.active]="i == selectedRowIndex" *ngFor="let contact of contacts;index as i;" (click)="setClickedRow(i)">
+      <td>{{contact.phoneNumber}}</td>
+      <td>{{contact.email}}</td>
+      <td>
+        <button type="button" (click)="delete(i)">Delete</button></td>
+    </tr>
+  </table>
+
+</div>
